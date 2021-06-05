@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-#root {
+.board-container {
   display: flex;
   align-items: center;
   justify-content: center;

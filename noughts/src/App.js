@@ -8,16 +8,18 @@ function Square() {
 
 function OAndX() {
   return (
-    <div className="board">
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
+    <div className="board-container">
+      <div className="board">
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+      </div>
     </div>
   );
 }
