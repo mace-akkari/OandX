@@ -1,6 +1,6 @@
-import { NAUGHT, CROSS, EMPTY } from '../lib/constants'
+import { NAUGHT, CROSS, EMPTY } from '../lib/constants';
 import { Naught } from './Naught';
-import { Cross } from './Cross'
+import { Cross } from './Cross';
 
 export function Square({ position, value, takeTurn }) {
   function handleClick() { 
@@ -12,5 +12,5 @@ export function Square({ position, value, takeTurn }) {
       {value === NAUGHT && <Naught />}
       {value === CROSS && <Cross />}
     </div>
-  )
+  );
 }
