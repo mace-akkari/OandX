@@ -23,5 +23,5 @@ export function detectWinner(p) {
   if(p[0] === CROSS && p[4] === CROSS && p[8] === CROSS) return CROSS;
   if(p[2] === CROSS && p[4] === CROSS && p[6] === CROSS) return CROSS;
  
-  if(p.every(position => position != EMPTY)) return "It is a draw";
+  if(p.every(position => position !== EMPTY)) return "It is a draw";
 }
