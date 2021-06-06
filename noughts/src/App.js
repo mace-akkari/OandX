@@ -2,13 +2,21 @@ import React from "react"
 import './App.css'
 import { Naught } from "./components/Naught"
 import { Cross } from "./components/Cross"
+import { NAUGHT, CROSS, EMPTY } from "./lib/constants";
 
 
 function Square() {
   return <div className="square"></div>;
 }
 
+
 function OAndX() {
+  const player = NAUGHT;
+  const positions = [
+    EMPTY, EMPTY, NAUGHT,
+    EMPTY, CROSS, EMPTY,
+    EMPTY, NAUGHT, EMPTY
+  ];
   return (
     <div className="board-container">
       <div className="board">
