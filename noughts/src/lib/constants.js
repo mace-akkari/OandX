@@ -1,3 +1,3 @@
-const EMPTY = 'EMPTY';
-const CIRCLE = 'NAUGHT';
-const CROSS = 'CROSS';
+export const EMPTY = 'EMPTY';
+export const NAUGHT = 'NAUGHT';
+export const CROSS = 'CROSS';
