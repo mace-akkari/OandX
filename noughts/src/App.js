@@ -3,13 +3,12 @@ import "./App.css";
 import { Square } from "./components/Square";
 import { NAUGHT, CROSS, EMPTY } from "./lib/constants";
 import { detectWinner } from "./lib/detectWinner";
+import { Result } from "./components/Result";
 
 function OAndX() {
   const [state, setState] = React.useState({
     player: NAUGHT,
-    positions: [EMPTY, EMPTY, EMPTY, 
-                EMPTY, EMPTY, EMPTY, 
-                EMPTY, EMPTY, EMPTY],
+    positions: [EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY],
   });
 
   function takeTurn(position) {
@@ -20,6 +19,17 @@ function OAndX() {
       player: state.player === NAUGHT ? CROSS : NAUGHT,
       positions,
     });
+  }
+
+  function reset() {
+    setState({
+      player: NAUGHT,
+      positions: [
+        EMPTY, EMPTY, EMPTY,
+        EMPTY, EMPTY, EMPTY,
+        EMPTY, EMPTY, EMPTY
+      ]
+    })
   }
 
   const winner = detectWinner(state.positions);
@@ -37,6 +47,7 @@ function OAndX() {
         <Square position={7} value={state.positions[7]} takeTurn={takeTurn} />
         <Square position={8} value={state.positions[8]} takeTurn={takeTurn} />
       </div>
+      {winner && <Result winner={winner} reset={reset} />}
     </div>
   );
 }
